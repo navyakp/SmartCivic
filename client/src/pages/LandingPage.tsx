@@ -216,7 +216,7 @@ export const LandingPage: React.FC = () => {
             <h2 className="text-xs uppercase tracking-wider font-bold text-[#697786]">
               End-to-End Workflow
             </h2>
-            <p className="text-2xl font-bold text-[#233B53] mt-1">How CivicPulse AI Works</p>
+            <p className="text-2xl font-bold text-[#233B53] mt-1">How SmartCivic Works</p>
             <p className="text-xs text-[#697786] mt-1">
               From citizen grievance to verified municipal action in four transparent stages.
             </p>
@@ -323,7 +323,7 @@ export const LandingPage: React.FC = () => {
           <div className="space-y-2 max-w-xl">
             <h3 className="text-xl sm:text-2xl font-bold">See a problem in your neighborhood?</h3>
             <p className="text-xs sm:text-sm text-[#DCE2E8]/80 leading-relaxed">
-              Every report matters. CivicPulse AI ensures your grievance doesn't get lost in paperwork.
+              Every report matters. SmartCivic ensures your grievance doesn't get lost in paperwork.
               Log your issue in under 60 seconds with photos and map coordinates.
             </p>
           </div>
@@ -346,3 +346,4 @@ export const LandingPage: React.FC = () => {
     </div>
   );
 };
+

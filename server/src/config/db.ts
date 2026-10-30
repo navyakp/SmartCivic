@@ -20,8 +20,8 @@ export async function connectDB(): Promise<void> {
 
   // If local URI wasn't provided or failed, try connecting to standard local default first
   try {
-    console.log('[Database] Checking local mongodb://127.0.0.1:27017/civicpulse ...');
-    await mongoose.connect('mongodb://127.0.0.1:27017/civicpulse', {
+    console.log('[Database] Checking local mongodb://127.0.0.1:27017/SmartCivic ...');
+    await mongoose.connect('mongodb://127.0.0.1:27017/SmartCivic', {
       serverSelectionTimeoutMS: 2000,
     });
     console.log('[Database] Connected to local MongoDB instance.');
@@ -33,7 +33,7 @@ export async function connectDB(): Promise<void> {
   try {
     memoryServer = await MongoMemoryServer.create({
       instance: {
-        dbName: 'civicpulse',
+        dbName: 'SmartCivic',
       },
     });
     const memoryUri = memoryServer.getUri();

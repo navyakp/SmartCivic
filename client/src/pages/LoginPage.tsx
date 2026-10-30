@@ -32,13 +32,13 @@ export const LoginPage: React.FC = () => {
 
   const fillDemoAccount = (role: 'admin' | 'drainage' | 'roads' | 'citizen') => {
     if (role === 'admin') {
-      setEmail('admin@civicpulse.gov');
+      setEmail('admin@SmartCivic.gov');
       setPassword('Admin@12345');
     } else if (role === 'drainage') {
-      setEmail('drainage.officer@civicpulse.gov');
+      setEmail('drainage.officer@SmartCivic.gov');
       setPassword('Officer@12345');
     } else if (role === 'roads') {
-      setEmail('roads.officer@civicpulse.gov');
+      setEmail('roads.officer@SmartCivic.gov');
       setPassword('Officer@12345');
     } else {
       setEmail('citizen@example.com');
@@ -56,7 +56,7 @@ export const LoginPage: React.FC = () => {
           </div>
         </div>
         <h2 className="mt-4 text-center text-2xl font-extrabold text-[#233B53]">
-          Sign in to CivicPulse AI
+          Sign in to SmartCivic
         </h2>
         <p className="mt-1 text-center text-xs text-[#697786]">
           Secure citizen and municipal administration portal
@@ -123,7 +123,7 @@ export const LoginPage: React.FC = () => {
                 className="px-2.5 py-1.5 bg-[#F4F6F8] hover:bg-[#DCE2E8] text-[#233B53] font-medium rounded border border-[#DCE2E8] transition text-left"
               >
                 <div className="font-bold">Administrator</div>
-                <div className="text-[10px] text-[#697786]">admin@civicpulse.gov</div>
+                <div className="text-[10px] text-[#697786]">admin@SmartCivic.gov</div>
               </button>
               <button
                 type="button"
@@ -163,3 +163,4 @@ export const LoginPage: React.FC = () => {
     </div>
   );
 };
+

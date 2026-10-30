@@ -17,7 +17,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
-  const [token, setToken] = useState<string | null>(() => localStorage.getItem('civicpulse_token'));
+  const [token, setToken] = useState<string | null>(() => localStorage.getItem('SmartCivic_token'));
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
           setUser(res.user);
         } catch {
           // Token expired or invalid
-          localStorage.removeItem('civicpulse_token');
+          localStorage.removeItem('SmartCivic_token');
           setToken(null);
           setUser(null);
         }
@@ -40,7 +40,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const login = async (email: string, password: string): Promise<User> => {
     const res = await api.login({ email, password });
-    localStorage.setItem('civicpulse_token', res.token);
+    localStorage.setItem('SmartCivic_token', res.token);
     setToken(res.token);
     setUser(res.user);
     return res.user;
@@ -48,14 +48,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const register = async (name: string, email: string, password: string, phone?: string): Promise<User> => {
     const res = await api.register({ name, email, password, phone });
-    localStorage.setItem('civicpulse_token', res.token);
+    localStorage.setItem('SmartCivic_token', res.token);
     setToken(res.token);
     setUser(res.user);
     return res.user;
   };
 
   const logout = () => {
-    localStorage.removeItem('civicpulse_token');
+    localStorage.removeItem('SmartCivic_token');
     setToken(null);
     setUser(null);
   };
@@ -101,3 +101,4 @@ export const useAuth = () => {
   }
   return context;
 };
+

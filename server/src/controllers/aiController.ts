@@ -140,3 +140,4 @@ export async function getAIStatus(_req: Request, res: Response): Promise<void> {
       : 'Local Rule-Based Heuristic NLP active (set GEMINI_API_KEY in .env to enable Google Gemini Live API).',
   });
 }
+

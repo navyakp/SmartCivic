@@ -13,3 +13,4 @@ router.patch('/:id/read', requireAuth, markAsRead);
 router.post('/read-all', requireAuth, markAllAsRead);
 
 export default router;
+

@@ -147,7 +147,7 @@ export function calculatePriorityScore(input: PriorityInput): PriorityCalculatio
       clusterExplanation,
       recurrenceExplanation,
     },
-    scoringVersion: 'v1.2-civicpulse-deterministic',
+    scoringVersion: 'v1.2-SmartCivic-deterministic',
     calculatedAt: new Date(),
   };
 }

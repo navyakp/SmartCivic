@@ -1,7 +1,7 @@
 {
-  "name": "civicpulse-server",
+  "name": "smartcivic-server",
   "version": "1.0.0",
-  "description": "CivicPulse AI Backend API Server",
+  "description": "SmartCivic Backend API Server",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",

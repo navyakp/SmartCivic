@@ -27,7 +27,7 @@ export const Navbar: React.FC = () => {
             </div>
             <div>
               <span className="text-lg font-bold tracking-tight text-[#233B53] block leading-none">
-                CivicPulse <span className="text-[#315F80]">AI</span>
+                SmartCivic <span className="text-[#315F80]">AI</span>
               </span>
               <span className="text-[10px] text-[#697786] font-medium tracking-wide">
                 From Complaints to Action
@@ -132,3 +132,4 @@ export const Navbar: React.FC = () => {
     </header>
   );
 };
+

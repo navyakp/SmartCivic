@@ -1,4 +1,4 @@
-# CivicPulse AI — From Complaints to Action
+# SmartCivic — From Complaints to Action
 
 > **AI-Powered Civic Intelligence & Grievance Management Platform**  
 > Built for Civic Technology Demonstrations & Municipal Hackathons.
@@ -11,7 +11,7 @@ Transform scattered citizen complaints into prioritized, explainable, geographic
 
 Communities regularly encounter critical infrastructure hazards: waterlogging, dangerous potholes, overflowing waste, blocked drainage, failed streetlights, and public safety threats. Traditional grievance channels leave urgent hazards buried among routine complaints, offer no duplicate detection, and keep citizens in the dark.
 
-**CivicPulse AI** solves this through a four-stage pipeline:
+**SmartCivic** solves this through a four-stage pipeline:
 1. **CAPTURE:** Citizens submit complaints with photographs, description, and an exact interactive Leaflet map pin in under one minute.
 2. **UNDERSTAND:** AI categorizes issues, produces executive summaries, detects duplicates via text similarity and geographic proximity, and calculates a deterministic, explainable priority score (0–100).
 3. **REVEAL:** Geographic visualization shows real-time issue distribution, clustering hotspots, and synthesizes automated AI Action Briefs for municipal authorities.
@@ -21,7 +21,7 @@ Communities regularly encounter critical infrastructure hazards: waterlogging, d
 
 ## 🎨 Professional Civic Design System
 
-CivicPulse AI is engineered with the aesthetic and authority of a genuine municipal government platform:
+SmartCivic is engineered with the aesthetic and authority of a genuine municipal government platform:
 * **Primary Dark Navy:** `#233B53`
 * **Primary Blue:** `#315F80`
 * **Secondary Blue:** `#547D99`
@@ -71,9 +71,9 @@ The platform comes pre-seeded with 41 realistic civic records and four ready-to-
 
 | Role | Email | Password | Scope |
 |---|---|---|---|
-| **Administrator** | `admin@civicpulse.gov` | `Admin@12345` | Municipal Commissioner (Full access to all complaints, assignments, overrides, and analytics) |
-| **Drainage Officer** | `drainage.officer@civicpulse.gov` | `Officer@12345` | Senior Officer Rajesh Kumar (Drainage & Sanitation Department) |
-| **Roads Officer** | `roads.officer@civicpulse.gov` | `Officer@12345` | Chief Inspector David Miller (Road Maintenance Department) |
+| **Administrator** | `admin@SmartCivic.gov` | `Admin@12345` | Municipal Commissioner (Full access to all complaints, assignments, overrides, and analytics) |
+| **Drainage Officer** | `drainage.officer@SmartCivic.gov` | `Officer@12345` | Senior Officer Rajesh Kumar (Drainage & Sanitation Department) |
+| **Roads Officer** | `roads.officer@SmartCivic.gov` | `Officer@12345` | Chief Inspector David Miller (Road Maintenance Department) |
 | **Citizen** | `citizen@example.com` | `Citizen@12345` | John Doe (Submit issues, view private history, track progress) |
 
 *(Quick pre-fill buttons are available directly on the login page for instant demonstration.)*
@@ -98,7 +98,7 @@ Create `server/.env` based on `server/.env.example`:
 ```ini
 PORT=5000
 MONGODB_URI=
-JWT_SECRET=civicpulse_jwt_super_secret_production_ready_key_2026
+JWT_SECRET=SmartCivic_jwt_super_secret_production_ready_key_2026
 GEMINI_API_KEY=
 GEMINI_MODEL=gemini-1.5-flash
 CLIENT_URL=http://localhost:5173
@@ -145,7 +145,7 @@ Follow this step-by-step sequence to demonstrate the entire integrated workflow 
    * **Duplicate Detection:** Notice that the engine immediately detects existing reports within 50 meters and flags them without destroying citizen records.
 
 ### Step 3 — Reveal Insights (Authority Portal)
-1. Log in as **Administrator** (`admin@civicpulse.gov` / `Admin@12345`) or navigate to `/admin`.
+1. Log in as **Administrator** (`admin@SmartCivic.gov` / `Admin@12345`) or navigate to `/admin`.
 2. Open the **Overview Dashboard** (`/admin`) to inspect live database KPIs, category bars, and resolution trends.
 3. Open the **Live Issue Map** (`/admin/map`) to see the color-coded priority pins, cluster circles (600m radius), and filter by category or status.
 4. Open **AI Intelligence** (`/admin/ai-insights`) to view the synthesized Action Brief recommending culvert desilting on MG Road.
@@ -176,3 +176,4 @@ Follow this step-by-step sequence to demonstrate the entire integrated workflow 
 
 ## 📄 License
 Released for Civic Technology and Municipal Governance demonstrations.
+

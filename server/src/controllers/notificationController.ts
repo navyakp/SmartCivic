@@ -49,3 +49,4 @@ export async function markAllAsRead(req: AuthRequest, res: Response): Promise<vo
     res.status(500).json({ success: false, message: error.message });
   }
 }
+

@@ -1,3 +1,4 @@
+
 import bcrypt from 'bcryptjs';
 import dotenv from 'dotenv';
 import { connectDB, disconnectDB } from '../config/db.js';
@@ -705,12 +706,12 @@ export async function seedDatabaseData() {
         tmpl.category === 'Waterlogging'
           ? 'https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=600&q=80'
           : tmpl.category === 'Roads and potholes'
-          ? 'https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&w=600&q=80'
-          : tmpl.category === 'Waste management'
-          ? 'https://images.unsplash.com/photo-1605600659908-0ef719419d41?auto=format&fit=crop&w=600&q=80'
-          : tmpl.category === 'Streetlights'
-          ? 'https://images.unsplash.com/photo-1509114397022-ed747cca3f65?auto=format&fit=crop&w=600&q=80'
-          : 'https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&w=600&q=80',
+            ? 'https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&w=600&q=80'
+            : tmpl.category === 'Waste management'
+              ? 'https://images.unsplash.com/photo-1605600659908-0ef719419d41?auto=format&fit=crop&w=600&q=80'
+              : tmpl.category === 'Streetlights'
+                ? 'https://images.unsplash.com/photo-1509114397022-ed747cca3f65?auto=format&fit=crop&w=600&q=80'
+                : 'https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&w=600&q=80',
       ],
       address: tmpl.address,
       latitude: tmpl.lat,

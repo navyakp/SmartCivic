@@ -31,3 +31,4 @@ router.post('/:id/assign', requireAuth, requireRole('admin'), assignComplaint);
 router.post('/:id/resolve', requireAuth, requireRole('officer', 'admin'), resolveComplaint);
 
 export default router;
+

@@ -79,7 +79,7 @@ export const CitizenProfilePage: React.FC = () => {
           <div className="space-y-1">
             <span className="font-bold text-[#233B53]">Responsible AI & Privacy Protection</span>
             <p className="text-[#697786] leading-relaxed text-[11px]">
-              CivicPulse AI adheres to responsible civic computing guidelines. Your telephone and email are protected and only accessible to assigned officers resolving your grievance.
+              SmartCivic adheres to responsible civic computing guidelines. Your telephone and email are protected and only accessible to assigned officers resolving your grievance.
             </p>
           </div>
         </div>
@@ -103,3 +103,4 @@ export const CitizenProfilePage: React.FC = () => {
     </div>
   );
 };
+

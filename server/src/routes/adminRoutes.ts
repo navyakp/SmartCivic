@@ -20,3 +20,4 @@ router.get('/insights', requireAuth, requireRole('admin', 'officer'), getInsight
 router.get('/duplicates', requireAuth, requireRole('admin', 'officer'), getDuplicates);
 
 export default router;
+

@@ -21,7 +21,7 @@ export const PublicLayout: React.FC = () => {
                 <div className="w-8 h-8 rounded bg-[#315F80] flex items-center justify-center text-white">
                   <Shield className="w-4 h-4" />
                 </div>
-                <span className="font-bold text-white text-base">CivicPulse AI</span>
+                <span className="font-bold text-white text-base">SmartCivic</span>
               </div>
               <p className="text-xs text-[#DCE2E8]/80 leading-relaxed">
                 Transforming scattered citizen complaints into prioritized, explainable, geographically intelligent and trackable civic action.
@@ -101,7 +101,7 @@ export const PublicLayout: React.FC = () => {
                 </li>
                 <li className="flex items-center space-x-2">
                   <Mail className="w-3.5 h-3.5 text-[#547D99]" />
-                  <span>grievances@civicpulse.gov</span>
+                  <span>grievances@SmartCivic.gov</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <MapPin className="w-3.5 h-3.5 text-[#547D99] mt-0.5" />
@@ -112,7 +112,7 @@ export const PublicLayout: React.FC = () => {
           </div>
 
           <div className="mt-8 pt-8 border-t border-[#315F80]/30 flex flex-col md:flex-row items-center justify-between text-xs text-[#DCE2E8]/60">
-            <p>&copy; {new Date().getFullYear()} CivicPulse AI Platform. Built for Civic Technology Hackathon.</p>
+            <p>&copy; {new Date().getFullYear()} SmartCivic Platform. Built for Civic Technology Hackathon.</p>
             <p className="mt-2 md:mt-0">
               Demonstration Environment &bull; Transparent, Explainable & Responsible AI.
             </p>
@@ -122,3 +122,4 @@ export const PublicLayout: React.FC = () => {
     </div>
   );
 };
+

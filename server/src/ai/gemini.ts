@@ -144,7 +144,7 @@ export async function analyzeComplaintWithGemini(
       },
     });
 
-    const prompt = `You are the CivicPulse AI Complaint Understanding Engine for municipal governance.
+    const prompt = `You are the SmartCivic Complaint Understanding Engine for municipal governance.
 Analyze the following citizen report and return ONLY a valid JSON object matching this schema:
 {
   "category": "Roads and potholes" | "Waterlogging" | "Drainage and sewage" | "Waste management" | "Streetlights" | "Public infrastructure" | "Public safety" | "Other",

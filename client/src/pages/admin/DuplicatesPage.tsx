@@ -48,7 +48,7 @@ export const DuplicatesPage: React.FC = () => {
         <div className="space-y-1">
           <span className="font-bold text-[#233B53]">Non-Destructive Duplicate Detection Policy</span>
           <p className="text-[#697786] text-[11px] leading-relaxed">
-            CivicPulse AI never automatically merges or deletes citizen complaints. Flagged reports are surfaced for administrative review while preserving each citizen's individual tracking reference and notification channel.
+            SmartCivic never automatically merges or deletes citizen complaints. Flagged reports are surfaced for administrative review while preserving each citizen's individual tracking reference and notification channel.
           </p>
         </div>
       </div>
@@ -133,3 +133,4 @@ export const DuplicatesPage: React.FC = () => {
     </div>
   );
 };
+

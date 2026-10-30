@@ -49,7 +49,7 @@ export const AdminSidebar: React.FC<{ isOpen?: boolean; onClose?: () => void }> 
           </div>
           <div>
             <h1 className="font-bold text-sm tracking-wide text-white leading-none">
-              CivicPulse <span className="text-[#547D99]">ADMIN</span>
+              SmartCivic <span className="text-[#547D99]">ADMIN</span>
             </h1>
             <p className="text-[10px] text-[#DCE2E8]/70 mt-0.5 uppercase tracking-wider">
               {user?.role === 'admin' ? 'Municipal Authority' : 'Field Operations'}
@@ -90,9 +90,10 @@ export const AdminSidebar: React.FC<{ isOpen?: boolean; onClose?: () => void }> 
           <span>Exit to Public Portal</span>
         </NavLink>
         <div className="mt-2 px-3 text-[10px] text-[#DCE2E8]/40">
-          CivicPulse AI v1.0 &bull; Municipal Edition
+          SmartCivic v1.0 &bull; Municipal Edition
         </div>
       </div>
     </aside>
   );
 };
+

@@ -60,3 +60,4 @@ export const AdminTopNav: React.FC<AdminTopNavProps> = ({ onToggleSidebar, title
     </header>
   );
 };
+

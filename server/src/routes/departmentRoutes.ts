@@ -17,3 +17,4 @@ router.patch('/:id', requireAuth, requireRole('admin'), updateDepartment);
 router.delete('/:id', requireAuth, requireRole('admin'), deleteDepartment);
 
 export default router;
+

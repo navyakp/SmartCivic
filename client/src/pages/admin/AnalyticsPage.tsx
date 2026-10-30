@@ -178,3 +178,4 @@ export const AnalyticsPage: React.FC = () => {
     </div>
   );
 };
+

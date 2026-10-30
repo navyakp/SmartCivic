@@ -14,3 +14,4 @@ router.post('/retry/:complaintId', requireAuth, requireRole('admin', 'officer'),
 router.get('/analysis/:complaintId', requireAuth, getAnalysis);
 
 export default router;
+

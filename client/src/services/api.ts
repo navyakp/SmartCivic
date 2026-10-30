@@ -13,7 +13,7 @@ import {
 const API_BASE = '/api';
 
 function getAuthHeader(): Record<string, string> {
-  const token = localStorage.getItem('civicpulse_token');
+  const token = localStorage.getItem('SmartCivic_token');
   return token ? { Authorization: `Bearer ${token}` } : {};
 }
 
@@ -255,3 +255,4 @@ export const api = {
     }>(res);
   },
 };
+

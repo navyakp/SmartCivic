@@ -47,7 +47,7 @@ app.use('/api/ai', aiRoutes);
 app.get('/api/health', (_req, res) => {
   res.json({
     status: 'online',
-    system: 'CivicPulse AI Municipal Intelligence Platform',
+    system: 'SmartCivic Municipal Intelligence Platform',
     version: '1.0.0',
     timestamp: new Date().toISOString(),
   });
@@ -55,7 +55,7 @@ app.get('/api/health', (_req, res) => {
 
 // Global Error Handler
 app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
-  console.error('[CivicPulse Server Error]:', err);
+  console.error('[SmartCivic Server Error]:', err);
   res.status(err.status || 500).json({
     success: false,
     message: err.message || 'Internal Server Error',
@@ -69,13 +69,13 @@ async function startServer() {
     // Auto-seed if database is empty on start
     const count = await Complaint.countDocuments();
     if (count === 0) {
-      console.log('[CivicPulse] Empty database detected. Auto-seeding demonstration records...');
+      console.log('[SmartCivic] Empty database detected. Auto-seeding demonstration records...');
       await seedDatabaseData();
     }
 
     app.listen(PORT, () => {
       console.log(`=======================================================`);
-      console.log(` CivicPulse AI Backend running on port ${PORT}`);
+      console.log(` SmartCivic Backend running on port ${PORT}`);
       console.log(` Environment: ${process.env.NODE_ENV || 'development'}`);
       console.log(` Base API: http://localhost:${PORT}/api`);
       console.log(` Health:   http://localhost:${PORT}/api/health`);

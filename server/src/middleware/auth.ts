@@ -7,7 +7,7 @@ export interface AuthRequest extends Request {
 }
 
 export function generateToken(user: IUser): string {
-  const secret = process.env.JWT_SECRET || 'civicpulse_jwt_super_secret_production_ready_key_2026';
+  const secret = process.env.JWT_SECRET || 'SmartCivic_jwt_super_secret_production_ready_key_2026';
   return jwt.sign(
     {
       id: user._id,
@@ -30,7 +30,7 @@ export async function requireAuth(req: AuthRequest, res: Response, next: NextFun
     }
 
     const token = authHeader.split(' ')[1];
-    const secret = process.env.JWT_SECRET || 'civicpulse_jwt_super_secret_production_ready_key_2026';
+    const secret = process.env.JWT_SECRET || 'SmartCivic_jwt_super_secret_production_ready_key_2026';
 
     const decoded = jwt.verify(token, secret) as { id: string; role: UserRole };
     const user = await User.findById(decoded.id).select('-passwordHash');

@@ -179,3 +179,4 @@ export interface DashboardStats {
   resolved: number;
   avgResolutionHours: number;
 }
+

@@ -162,3 +162,4 @@ export const AIInsightsPage: React.FC = () => {
     </div>
   );
 };
+

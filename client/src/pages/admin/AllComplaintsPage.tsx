@@ -330,3 +330,4 @@ export const AllComplaintsPage: React.FC = () => {
     </div>
   );
 };
+

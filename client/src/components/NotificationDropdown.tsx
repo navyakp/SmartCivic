@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Bell, Check, ExternalLink, AlertTriangle, Info, CheckCircle2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -113,9 +114,8 @@ export const NotificationDropdown: React.FC = () => {
                 <div
                   key={item._id}
                   onClick={() => handleNotificationClick(item)}
-                  className={`p-3.5 transition cursor-pointer hover:bg-[#F4F6F8] flex items-start space-x-3 ${
-                    !item.isRead ? 'bg-[#315F80]/5' : ''
-                  }`}
+                  className={`p-3.5 transition cursor-pointer hover:bg-[#F4F6F8] flex items-start space-x-3 ${!item.isRead ? 'bg-[#315F80]/5' : ''
+                    }`}
                 >
                   <div className="mt-0.5 flex-shrink-0">
                     {item.type === 'CRITICAL_ALERT' ? (
@@ -160,3 +160,4 @@ export const NotificationDropdown: React.FC = () => {
     </div>
   );
 };
+

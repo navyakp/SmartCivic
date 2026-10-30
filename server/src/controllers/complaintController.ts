@@ -163,7 +163,7 @@ export async function submitComplaint(req: AuthRequest, res: Response): Promise<
       changedByName: citizen.name,
       previousStatus: 'NEW',
       newStatus: 'SUBMITTED',
-      remarks: 'Complaint submitted by citizen via CivicPulse portal.',
+      remarks: 'Complaint submitted by citizen via SmartCivic portal.',
       timestamp: new Date(),
     });
 
@@ -172,7 +172,7 @@ export async function submitComplaint(req: AuthRequest, res: Response): Promise<
       recipientId: citizen._id,
       complaintId,
       title: 'Complaint Lodged Successfully',
-      message: `Your report #${complaintId} has been registered and analyzed by CivicPulse AI. Initial priority: ${priorityResult.priority}.`,
+      message: `Your report #${complaintId} has been registered and analyzed by SmartCivic. Initial priority: ${priorityResult.priority}.`,
       type: 'STATUS_UPDATE',
     });
 
@@ -567,3 +567,4 @@ export async function resolveComplaint(req: AuthRequest, res: Response): Promise
     res.status(500).json({ success: false, message: error.message });
   }
 }
+
