@@ -10,7 +10,10 @@ import {
   DashboardStats,
 } from '../types';
 
-const API_BASE = '/api';
+const envApiUrl = (import.meta as any).env?.VITE_API_URL;
+const API_BASE = envApiUrl
+  ? (envApiUrl.endsWith('/api') ? envApiUrl : `${envApiUrl.replace(/\/$/, '')}/api`)
+  : '/api';
 
 function getAuthHeader(): Record<string, string> {
   const token = localStorage.getItem('SmartCivic_token');

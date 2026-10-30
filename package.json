@@ -1,13 +1,20 @@
 {
-  "name": "SmartCivic-ai-root",
+  "name": "smartcivic-root",
   "version": "1.0.0",
   "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
   "scripts": {
-    "install:all": "npm install --prefix server && npm install --prefix client",
+    "postinstall": "npm --prefix server install && npm --prefix client install",
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "build:server": "npm --prefix server install && npm --prefix server run build",
+    "build:client": "npm --prefix client install && npm --prefix client run build",
+    "build": "npm --prefix server install && npm --prefix server run build && npm --prefix client install && npm --prefix client run build",
+    "start": "node server/dist/index.js",
     "dev:server": "npm run dev --prefix server",
     "dev:client": "npm run dev --prefix client",
-    "build": "npm run build --prefix server && npm run build --prefix client",
     "seed": "npm run seed --prefix server"
   }
 }
-

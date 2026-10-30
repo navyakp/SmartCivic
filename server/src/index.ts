@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
+import fs from 'fs';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db.js';
 import { Complaint } from './models/Complaint.js';
@@ -52,6 +53,26 @@ app.get('/api/health', (_req, res) => {
     timestamp: new Date().toISOString(),
   });
 });
+
+// Serve static client frontend if built (full-stack single-service deployment)
+const possibleClientDistPaths = [
+  path.resolve(process.cwd(), 'client/dist'),
+  path.resolve(process.cwd(), '../client/dist'),
+];
+
+for (const distPath of possibleClientDistPaths) {
+  if (fs.existsSync(distPath)) {
+    console.log(`[SmartCivic] Serving static frontend from: ${distPath}`);
+    app.use(express.static(distPath));
+    app.get('*', (req, res, next) => {
+      if (req.path.startsWith('/api') || req.path.startsWith('/uploads')) {
+        return next();
+      }
+      res.sendFile(path.resolve(distPath, 'index.html'));
+    });
+    break;
+  }
+}
 
 // Global Error Handler
 app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
